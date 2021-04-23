@@ -2,18 +2,7 @@ import React, { createContext, useReducer } from "react";
 import { data } from "../utils/mockups/mockup";
 import AppReducer from "./AppReducer";
 
-// interface characteristics {
-
-// }
-
-// interface productOfferingPrices {
-
-// }
-
-// interface version {
-
-// }
-
+// all the types we use any by the time
 interface State {
   Offers: any;
   Offer: any;
