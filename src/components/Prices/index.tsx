@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../globalState";
 
-const Prices = ({
-  dataSelect,
-  formatter,
-}: {
-  dataSelect: any;
-  formatter: any;
-}) => {
+const Prices = () => {
+  const { Offer: dataSelect } = useContext(GlobalContext);
+
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+  });
   return (
     <div className="bg-white-900 lg:col-span-2 rounded-lg shadow-xl lg:order-4">
       <div className="mx-8 2xl:mx-10 my-10 h-full">
-        {dataSelect &&
+        {/* {dataSelect.length > 0 &&
           dataSelect[0].versions[0].productOfferingPrices.map((i: any) => (
             <div className="text-center">
               {i.versions.map((i: any) => (
@@ -24,7 +26,7 @@ const Prices = ({
                 </div>
               ))}
             </div>
-          ))}
+          ))} */}
       </div>
     </div>
   );
