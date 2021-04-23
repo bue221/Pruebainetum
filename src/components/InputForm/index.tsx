@@ -6,7 +6,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 
 const InputForm = () => {
-  const { Offer, Offers, select: SelectOffer } = useContext(GlobalContext);
+  const { Offers, select: SelectOffer } = useContext(GlobalContext);
   //select state
   const [select, setSelect] = React.useState("");
 
@@ -19,7 +19,6 @@ const InputForm = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [select]);
 
-  console.log(Offer);
   return (
     <div className="bg-white-600 lg:order-1 lg:row-span-1 2xl:row-span-1 lg:col-span-2 rounded-lg shadow-xl mb-5 lg:mb-0">
       <div className="p-16">
