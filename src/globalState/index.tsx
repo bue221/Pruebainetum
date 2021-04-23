@@ -2,7 +2,26 @@ import React, { createContext, useReducer } from "react";
 import { data } from "../utils/mockups/mockup";
 import AppReducer from "./AppReducer";
 
-const initialState = {
+// interface characteristics {
+
+// }
+
+// interface productOfferingPrices {
+
+// }
+
+// interface version {
+
+// }
+
+interface State {
+  Offers: any;
+  Offer: any;
+  select: Function;
+  getAll: Function;
+}
+
+const initialState: State = {
   Offers: data,
   Offer: [],
   select: (q: string): void => {},

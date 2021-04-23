@@ -32,8 +32,10 @@ const InputForm = () => {
           fullWidth
           placeholder='LAPTOP X16P NEURON A PNTNM 14" LCD LANX'
         >
-          {Offers.map((i) => (
-            <MenuItem value={i.id}>{i.versions[0].name}</MenuItem>
+          {Offers.map((i: any) => (
+            <MenuItem key={i.id} value={i.id}>
+              {i.versions[0].name}
+            </MenuItem>
           ))}
         </Select>
       </div>
