@@ -11,7 +11,7 @@ const Characteristics = () => {
           Characteristics of the offer
         </h1>
         {dataSelect.length > 0 &&
-          dataSelect[0].versions[0].characteristics.map(
+          dataSelect[0]?.versions[0]?.characteristics.map(
             (i: any, index: number) => (
               <div className="flex justify-between" key={index}>
                 {i.versions.map((i: any, index: number) => (

@@ -11,10 +11,10 @@ const Prices = () => {
   });
 
   return (
-    <div className="bg-white-900 lg:col-span-2 rounded-lg shadow-xl lg:order-4">
+    <div className="bg-white-900 lg:order-4 lg:col-span-2 rounded-lg shadow-xl">
       <div className="mx-8 2xl:mx-10 my-10 h-full">
-        {dataSelect.length > 0 &&
-          dataSelect[0].versions[0].productOfferingPrices.map(
+        {dataSelect.length > 0 ? (
+          dataSelect[0]?.versions[0]?.productOfferingPrices?.map(
             (i: any, index: number) => (
               <div className="text-center" key={index}>
                 {i.versions.map((i: any, index: number) => (
@@ -29,7 +29,10 @@ const Prices = () => {
                 ))}
               </div>
             )
-          )}
+          )
+        ) : (
+          <h1>NO PRICES</h1>
+        )}
       </div>
     </div>
   );
