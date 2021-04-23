@@ -14,9 +14,11 @@ const Characteristics = () => {
           dataSelect[0].versions[0].characteristics.map(
             (i: any, index: number) => (
               <div className="flex justify-between" key={index}>
-                {index}
-                {i.versions.map((i: any) => (
-                  <div className="flex justify-between items-center w-full m-2">
+                {i.versions.map((i: any, index: number) => (
+                  <div
+                    className="flex justify-between items-center w-full m-2"
+                    key={index}
+                  >
                     <h1 className="text-lg font-semibold text-gray-700 dark:text-gray-200">
                       {i.name}:
                     </h1>
